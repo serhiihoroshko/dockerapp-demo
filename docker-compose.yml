@@ -1,0 +1,11 @@
+version: '3'
+services:
+  dockerapp-demo:
+    build: .
+    ports:
+      - '5000:5000'
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:6.2.4
